@@ -3,8 +3,6 @@
 [RequireComponent(typeof(Rigidbody))]
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private float _flySpeed;
-
     private Rigidbody _rigidbody;
 
     private void Awake()
@@ -12,8 +10,8 @@ public class Projectile : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    public void Launch(Vector3 direction)
+    public void Launch(Vector3 direction, float speed)
     {
-        _rigidbody.velocity = direction * _flySpeed;
+        _rigidbody.velocity = direction * speed;
     }
 }
