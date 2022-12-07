@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1561153142460760862}
   - component: {fileID: 1561153142460760857}
+  - component: {fileID: 2447860406606662028}
   - component: {fileID: 6032036000956169683}
   - component: {fileID: 1561153142460760863}
   - component: {fileID: 1561153142460760856}
@@ -50,6 +51,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxScore: 20
   _center: {fileID: 1561153142540468824}
+  OnProjectileHitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2447860406606662028}
+        m_TargetAssemblyTypeName: DamageableObject, Assembly-CSharp
+        m_MethodName: Destroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2447860406606662028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561153142460760861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62f6b8d673516c43841bf6e0bf4e1c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 4
 --- !u!114 &6032036000956169683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,6 +94,21 @@ MonoBehaviour:
   _speed: 2
   _waitingTime: 1
   _pathway: []
+  OnPathEndedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2447860406606662028}
+        m_TargetAssemblyTypeName: DamageableObject, Assembly-CSharp
+        m_MethodName: Destroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1561153142460760863
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,11 +1,14 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider))]
 public class Target : MonoBehaviour
 {
     [SerializeField] private float _maxScore;
     [SerializeField] private Transform _center;
+
+    public UnityEvent OnProjectileHitEvent;
 
     private Vector3 _size;
 
@@ -20,6 +23,7 @@ public class Target : MonoBehaviour
         if (projectile == null)
             return;
 
+        OnProjectileHitEvent.Invoke();
         var projectileContact = otherCollision.contacts.FirstOrDefault(contact => contact.otherCollider == otherCollision.collider);
         IncreaseScore(projectileContact.point);
     }

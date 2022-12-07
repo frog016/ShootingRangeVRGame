@@ -1,11 +1,14 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PathwayMovement : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _waitingTime;
     [SerializeField] private Transform[] _pathway;
+
+    public UnityEvent OnPathEndedEvent;
 
     public void StartMoving()
     {
@@ -24,6 +27,8 @@ public class PathwayMovement : MonoBehaviour
 
             yield return new WaitForSeconds(_waitingTime);
         }
+
+        OnPathEndedEvent.Invoke();
     }
 
     private void MoveTo(Transform point)
