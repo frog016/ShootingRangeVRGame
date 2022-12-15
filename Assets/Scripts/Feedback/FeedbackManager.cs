@@ -46,8 +46,8 @@ public class FeedbackManager : MonoBehaviour
         var duration = _msBetweenHapticCall < 0
             ? Time.deltaTime * _framePerHapticCall
             : _msBetweenHapticCall / 1000;
-        var leftAmplitude = _currentLeftVibrations.Max(vibration => vibration.Amplitude);
-        var rightAmplitude = _currentRightVibrations.Max(vibration => vibration.Amplitude);
+        var leftAmplitude = _currentLeftVibrations.Count != 0 ? _currentLeftVibrations.Max(vibration => vibration.Amplitude) : 0;
+        var rightAmplitude = _currentRightVibrations.Count != 0 ? _currentRightVibrations.Max(vibration => vibration.Amplitude) : 0;
         leftAmplitude = Mathf.Min(leftAmplitude * _sensitivity, 1);
         rightAmplitude = Mathf.Min(rightAmplitude * _sensitivity, 1);
 

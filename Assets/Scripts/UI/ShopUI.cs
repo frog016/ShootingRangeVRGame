@@ -11,6 +11,11 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private ShopItemStyle _unlockedStyle;
     [SerializeField] private ShopItemStyle _lockedStyle;
 
+    private void Awake()
+    {
+        FillShop();
+    }
+
     public void FillShop()
     {
         var allItemsData = _shop.GetAllData();

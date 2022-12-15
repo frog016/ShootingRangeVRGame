@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4076566290866840963}
   - component: {fileID: 2288266227593796574}
+  - component: {fileID: 1070198450433391981}
   m_Layer: 0
   m_Name: Cube.002
   m_TagString: Untagged
@@ -99,6 +100,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.015761768, y: 0.015380907, z: -0.000033855205}
     m_Extent: {x: 0.023014097, y: 0.022145618, z: 0.0034492481}
   m_DirtyAABB: 0
+--- !u!64 &1070198450433391981
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183248418993071199}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1550514412580984892, guid: 8be5c5d94515dfa4fb78263028c12a87, type: 3}
 --- !u!1 &730077809545930468
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,7 +814,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!82 &8522954250409865093
 AudioSource:
   m_ObjectHideFlags: 0
