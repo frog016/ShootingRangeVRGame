@@ -7,6 +7,7 @@ public class Target : MonoBehaviour
 {
     [SerializeField] private float _maxScore;
     [SerializeField] private Transform _center;
+    [SerializeField] private ScoreStorage _scoreStorage;
 
     public UnityEvent OnProjectileHitEvent;
 
@@ -35,6 +36,6 @@ public class Target : MonoBehaviour
         var maxDistanceToCenter = ((Vector2)_center.position - (Vector2)_size).magnitude;
         var givenScore = _maxScore * (maxDistanceToCenter - distanceToCenter);
 
-        ScoreStorage.Instance.ChangeScore((int)givenScore);
+        _scoreStorage.ChangeScore((int)givenScore);
     }
 }

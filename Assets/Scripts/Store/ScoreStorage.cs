@@ -1,6 +1,8 @@
 using System;
+using UnityEngine;
 
-public class ScoreStorage : SingletonObject<ScoreStorage>
+[CreateAssetMenu(menuName = "Store/Storage/Score", fileName = "ScoreStorage")]
+public class ScoreStorage : ScriptableObject
 {
     public int CurrentScore { get; private set; }
     public event Action<int> OnScoreChanged;

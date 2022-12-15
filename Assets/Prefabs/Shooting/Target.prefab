@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxScore: 20
   _center: {fileID: 1561153142540468824}
+  _scoreStorage: {fileID: 11400000, guid: 8b41aec0dd21afa4790b490373f4cc0c, type: 2}
   OnProjectileHitEvent:
     m_PersistentCalls:
       m_Calls:
