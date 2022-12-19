@@ -618,6 +618,7 @@ GameObject:
   - component: {fileID: 8522954250409865089}
   - component: {fileID: 8522954250409865095}
   - component: {fileID: 8522954250409865092}
+  - component: {fileID: 8818012293365741498}
   - component: {fileID: 8522954250409865094}
   - component: {fileID: 8522954250409865093}
   m_Layer: 0
@@ -799,6 +800,19 @@ MonoBehaviour:
   _projectileSpeed: 5
   _projectilePrefab: {fileID: 5473745253492438680, guid: 26ab876429cf52e45a5a766c746c9a0f, type: 3}
   _spawnTransform: {fileID: 8522954249338337347}
+--- !u!114 &8818012293365741498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8522954250409865210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68db8fdd7cbfcb24fa42e7b1c051f6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cooldownTime: 0.5
 --- !u!54 &8522954250409865094
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class WeaponShop : ScriptableObject
     [SerializeField] private ScoreStorage _scoreStorage; 
     [SerializeField] private WeaponStoreData[] _weaponsData;
 
+    public event Action<WeaponStoreData> ItemBoughtEvent; 
+
     public bool TryBuy(GameObject purchasedWeapon)
     {
         var weapon = _weaponsData.FirstOrDefault(weaponData => weaponData.Equals(purchasedWeapon));
@@ -15,6 +18,8 @@ public class WeaponShop : ScriptableObject
 
         weapon.IsBought = true;
         _scoreStorage.ChangeScore(-weapon.Price);
+        ItemBoughtEvent?.Invoke(weapon);
+
         return true;
     }
 

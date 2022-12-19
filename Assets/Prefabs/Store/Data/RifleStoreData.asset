@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50589e2cfd48fec40b00a5350211cc8c, type: 3}
   m_Name: RifleStoreData
   m_EditorClassIdentifier: 
-  _name: "\u0412\u0438\u043D\u0442\u043E\u0432\u043A\u0430 Perun X16"
+  _name: "\u0412\u0438\u043D\u0442\u043E\u0432\u043A\u0430 HCAR"
   _description: "\u0421\u043A\u043E\u0440\u043E\u0441\u0442\u0440\u0435\u0442\u044C\u043D\u043E\u0435
     \u043E\u0440\u0443\u0436\u0438\u0435 \u0434\u043B\u044F \u0434\u0432\u0443\u0445
     \u0440\u0443\u043A."
   _price: 25
+  _sprite: {fileID: 0}
   _weaponPrefab: {fileID: 6614889792655403680, guid: efacd8448e875774188b2c2c18101c37, type: 3}
   _isBought: 0

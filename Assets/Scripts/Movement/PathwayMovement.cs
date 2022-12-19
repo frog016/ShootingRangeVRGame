@@ -6,18 +6,17 @@ public class PathwayMovement : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _waitingTime;
-    [SerializeField] private Transform[] _pathway;
 
     public UnityEvent OnPathEndedEvent;
 
-    public void StartMoving()
+    public void StartMoving(Pathway pathway)
     {
-        StartCoroutine(MoveThroughPathwayCoroutine());
+        StartCoroutine(MoveThroughPathwayCoroutine(pathway));
     }
 
-    private IEnumerator MoveThroughPathwayCoroutine()
+    private IEnumerator MoveThroughPathwayCoroutine(Pathway pathway)
     {
-        foreach (var point in _pathway)
+        foreach (var point in pathway)
         {
             while (!AreClosetToPoint(point))
             {
@@ -39,6 +38,6 @@ public class PathwayMovement : MonoBehaviour
 
     private bool AreClosetToPoint(Transform transform)
     {
-        return Vector3.Distance(this.transform.position, transform.position) < 1e-5;
+        return Vector3.Distance(new Vector3(this.transform.position.x, 0, this.transform.position.z), transform.position) < 1e-5;
     }
 }
